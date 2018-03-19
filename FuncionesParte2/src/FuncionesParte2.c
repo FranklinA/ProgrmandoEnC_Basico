@@ -30,27 +30,26 @@ tipo_dato nombreFuncion( parametros ){
 
 #include <stdio.h>
 #include <stdlib.h>
-//prototipos para indicar la funcion en el programa principal
 
-int sumar(int n1, int n2);
+int suma(int n1,int n2);
 
 int main( ) {
 
+   //char str[100];
+   int i;
+   int a;
 
-	int a;
-	int b;
+   printf( "Enter a value 1 Enter a value 2:");
+   scanf("%d %d",&i,&a);//scanf("%s %d %d", str, &i, &a);
 
-	printf(" Digite: ");
-	scanf("%d %d",&a,&b);//Me funciono cambiando %i por %d
+   int s=suma(i,a);
 
-	int su=sumar(a,b);
+   printf( "\nYou entered: %d",s);//printf( "\nYou entered: %s %d %d %d", str, i, a,suma);
 
-	printf("\nLa suma es %d",su);
-
-	return 0;
+   return 0;
 }
 
-int sumar(int n1, int n2){
+int suma(int n1,int n2){
 	int sum=0;
 	sum=n1+n2;
 	return sum;
